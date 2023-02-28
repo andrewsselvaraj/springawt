@@ -1,4 +1,4 @@
-package com.javainuse.service;
+package com.auth.service;
 
 import java.util.ArrayList;
 

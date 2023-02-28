@@ -1,4 +1,4 @@
-package com.javainuse.config;
+package com.auth.config;
 
 import java.io.Serializable;
 import java.util.Date;
