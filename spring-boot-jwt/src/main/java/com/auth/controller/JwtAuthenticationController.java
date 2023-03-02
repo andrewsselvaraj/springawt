@@ -46,6 +46,20 @@ public class JwtAuthenticationController {
 
 		return ResponseEntity.ok(new JwtResponse(token));
 	}
+	
+	@RequestMapping(value = "/authenticateV1", method = RequestMethod.POST)
+	public ResponseEntity<?> createAuthenticationTokenV1(@RequestBody JwtRequest authenticationRequest)
+			throws Exception {
+
+		authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
+
+		final UserDetails userDetails = jwtInMemoryUserDetailsService
+				.loadUserByUsername(authenticationRequest.getUsername());
+
+		final String token = jwtTokenUtil.generateToken(userDetails);
+
+		return ResponseEntity.ok(new JwtResponse(token));
+	}
 
 	private void authenticate(String username, String password) throws Exception {
 		Objects.requireNonNull(username);
