@@ -68,8 +68,88 @@
 		{
 			"name": "Hello",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE2Nzc4NjMzMTUsImlhdCI6MTY3Nzg0NTMxNX0.fbhq6e1LFUt-CQbJMgzMsdymYjKtaSzxSqO1W8F_bVlpyg0wrkKZUyk5hm-7ADpG0ls9I4WE3KyjjeFAo-UQbw",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9876/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9876",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actuator",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE2Nzc4NjMzMTUsImlhdCI6MTY3Nzg0NTMxNX0.fbhq6e1LFUt-CQbJMgzMsdymYjKtaSzxSqO1W8F_bVlpyg0wrkKZUyk5hm-7ADpG0ls9I4WE3KyjjeFAo-UQbw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9876/actuator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9876",
+					"path": [
+						"actuator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "promothes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE2Nzc4NjMzMTUsImlhdCI6MTY3Nzg0NTMxNX0.fbhq6e1LFUt-CQbJMgzMsdymYjKtaSzxSqO1W8F_bVlpyg0wrkKZUyk5hm-7ADpG0ls9I4WE3KyjjeFAo-UQbw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9876/actuator/prometheus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9876",
+					"path": [
+						"actuator",
+						"prometheus"
+					]
+				}
 			},
 			"response": []
 		}
