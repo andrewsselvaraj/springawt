@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.auth.config.JwtTokenUtil;
+import com.auth.logger.LoggerUtility;
 import com.auth.model.JwtRequest;
 import com.auth.model.JwtResponse;
 
@@ -29,10 +30,18 @@ public class JwtAuthenticationController {
 
 	@Autowired
 	private JwtTokenUtil jwtTokenUtil;
+	
+	@Autowired
+	LoggerUtility logger;
 
+	@RequestMapping({ "/test" })
+	public String hello() {
+		
+		return "Hello World";
+	}
 	@Autowired
 	private UserDetailsService jwtInMemoryUserDetailsService;
-
+	//private static final Logger logger = LoggerFactory.getLogger(JwtAuthenticationController.class);
 	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest)
 			throws Exception {
@@ -66,6 +75,7 @@ public class JwtAuthenticationController {
 		Objects.requireNonNull(password);
 
 		try {
+			logger.log("LOG Inside Authentication");
 			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
 		} catch (DisabledException e) {
 			throw new Exception("USER_DISABLED", e);
