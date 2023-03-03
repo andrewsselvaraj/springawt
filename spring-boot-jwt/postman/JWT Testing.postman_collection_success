@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "4eb493b8-17e5-4209-93ae-996af55f0f65",
+		"name": "JWT Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5247603"
+	},
+	"item": [
+		{
+			"name": "jwtcheck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"javainuse\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://107.155.116.31:9876/authenticate",
+					"protocol": "http",
+					"host": [
+						"107",
+						"155",
+						"116",
+						"31"
+					],
+					"port": "9876",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"javainuse\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9876/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9876",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hello",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
