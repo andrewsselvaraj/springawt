@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 withMaven(
-                    // Maven settings.xml file containing credentials for the repository
+                    // Maven settings.xml file containing credentials for the repository..
                     mavenSettingsConfig: 'maven-settings',
                     // Maven options to use when building and deploying the artifact
                     options: [
