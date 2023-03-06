@@ -18,4 +18,4 @@ management:
             exposure:
                 include: '*'
 server:
-    port: 9877
+    port: 9876
