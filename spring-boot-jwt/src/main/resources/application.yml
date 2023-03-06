@@ -1,0 +1,21 @@
+jwt:
+    get:
+        token:
+            uri: /authenticate
+    secret: javainuse
+logging:
+      name: myapp.log
+      level:
+        net:
+            guides: DEBUG
+        org:
+            hibernate: ERROR
+            springframework:
+                web: INFO
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+server:
+    port: 9877
