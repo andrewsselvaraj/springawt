@@ -1,4 +1,4 @@
-package com.auth.config;
+package com.auth.util;
 
 import java.io.Serializable;
 import java.util.Date;

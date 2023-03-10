@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.auth.config.JwtTokenUtil;
 import com.auth.logger.LoggerUtility;
 import com.auth.model.JwtRequest;
 import com.auth.model.JwtResponse;
+import com.auth.util.JwtTokenUtil;
 
 @RestController
 @CrossOrigin

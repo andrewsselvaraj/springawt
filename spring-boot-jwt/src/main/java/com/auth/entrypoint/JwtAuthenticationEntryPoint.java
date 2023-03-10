@@ -1,4 +1,4 @@
-package com.auth.config;
+package com.auth.entrypoint;
 
 import java.io.IOException;
 import java.io.Serializable;
