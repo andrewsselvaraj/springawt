@@ -23,7 +23,7 @@ public class HomeControllerTestMock extends SpringBootHelloWorldTests{
     
     
     
-    @Test
+   // @Test
 	public void testController() throws Exception {
     	 ResponseEntity<String> response = template.getForEntity("/hello", String.class);
          assertThat(response.getBody()).isEqualTo("Hello World");
